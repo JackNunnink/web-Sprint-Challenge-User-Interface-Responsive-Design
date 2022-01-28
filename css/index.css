@@ -49,11 +49,19 @@ table {
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
 }
 
 html{
     font-size:62.5%;
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     line-height:1.5;
@@ -68,9 +76,50 @@ h1, h2, h3, h4, h5 {
 section, footer{
     padding:4% 0;
 }
+
 .container {
     width: 80%;
     margin: 0 auto;
+}
+
+/* Header Styles */
+
+header {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header nav .links{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    gap: 20%;
+}
+
+header .header-logo img {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    margin: 2%;
+}
+
+header nav .links a {
+    display: flex;
+    justify-content: flex-end;
+    margin: 2%;
+    width: 100%;
+    color: black;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
 }
 
 /*Top Section Styles*/
@@ -85,14 +134,28 @@ section, footer{
 }
 
 .top-content .text-container {
-    width: 35%;
+    width: 50%;
     padding: 0 1%;
-    padding-bottom: 4%;  
+    padding-bottom: 4%;
+}
+
+.top-content .text-container h2 {
+    text-align: center;
+    margin: 8%;
+}
+
+.top-content img {
+    width: 100%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*Middle Section Styles*/
 .middle-content {
     margin-bottom: 4%;
+    border-bottom: 2px solid #ff4b00;
 }
 
 .middle-content h2 {
@@ -106,12 +169,53 @@ section, footer{
 }
 
 .middle-content .boxes .box {
-    background: black;
     margin: 4% 0;
+    padding: 50px;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.middle-content .boxes .box1 {
+    background-color: teal;
+}
+
+.middle-content .boxes .box2 {
+    background-color: gold;
+}
+
+.middle-content .boxes .box3 {
+    background-color: cadetblue;
+}
+
+.middle-content .boxes .box4 {
+    background-color: coral;
+}
+
+.middle-content .boxes .box5 {
+    background-color: crimson;
+}
+
+.middle-content .boxes .box6 {
+    background-color: forestgreen;
+}
+
+.middle-content .boxes .box7 {
+    background-color: darkorchid;
+}
+
+.middle-content .boxes .box8 {
+    background-color: hotpink;
+}
+
+.middle-content .boxes .box9 {
+    background-color: indigo;
+}
+
+.middle-content .boxes .box10 {
+    background-color: dodgerblue;
+    padding: 50px 45px 50px 40px;
 }
 
 /*Bottom Section Styles*/
@@ -121,7 +225,11 @@ section, footer{
 }
 
 .bottom-content .text-container {
-    width:25%;
+    width: 30%;
+}
+
+.bottom-content .text-container h2 {
+    margin-bottom: 8%;
 }
 
 .bottom-content .text-container:last-child {
@@ -134,7 +242,193 @@ footer {
     background-color: #ff4b00;
 }
 
+footer nav .links {
+    display: flex;
+    height: 10%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer nav .links a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
 /*About Page Styles*/
+
+.about-top-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0;
+    justify-content: space-between;
+    margin-bottom: 4%;
+    border-bottom: 2px solid #ff4b00;
+    text-align: justify;
+}
+
+.about-top-content img {
+    width: 100%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-top-content .about-text-container {
+    padding: 0 1%;
+    padding-bottom: 4%;
+}
+
+.container-about-page {
+    gap: 4%;
+    margin-top: 8%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container-about-page .about-box{
+    display: flex;
+    flex-wrap: wrap;
+    width: 45%;
+    justify-content: space-evenly;
+    margin-bottom: 8%;
+    border-bottom: 2px solid #ff4b00;
+    text-align: justify;
+}
+
+.container-about-page .about-box img {
+    width: 100%;
+    margin-bottom: 10%;
+}
+.container-about-page .about-box h2 {
+    margin-bottom: 10%;
+}
+
+.container-about-page .about-box p {
+    margin-bottom: 10%;
+}
+
+.about-bottom-content {
+    margin-bottom: 6%;
+}
 
 
 /*Responsive Styles*/
+
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    header {
+        margin-top: 2%;
+        width: 90%;
+    }
+
+    header nav {
+        flex-flow: column wrap;
+        margin-bottom: 4%;
+    }
+
+    header nav .links {
+        justify-content: center;
+        gap: 0;
+    }
+
+    header nav .links a {
+        justify-content: center;
+        font-size: 1.4rem;
+    }
+
+    header nav .header-logo img {
+        justify-content: center;
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    .top-content {
+        flex-direction: column;
+    }
+
+    .top-content .text-container {
+        width: 80%;
+        margin-left: 8%;
+    }
+
+    .middle-content h2 {
+        text-align: center;
+        margin-bottom: 8%;
+    }
+        
+    .bottom-content {
+        width: 80%;
+        margin-left: 10%;
+        margin-bottom: 8%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bottom-content .text-container {
+        width: 100%;
+    }
+
+    .bottom-content .text-container h2 {
+        display: flex;
+        justify-content: center;
+        margin-top: 5%;
+    }
+
+    .bottom-content .text-container p {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5%;
+        margin-left: 8%;
+    }
+
+    footer nav .links {
+        flex-flow: column;
+        align-items: center;
+    }
+
+    footer nav .links a {
+        margin: 2%;
+    }
+
+    /* About Reactive Style */
+
+    .about-top-content .about-text-container {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .about-top-content .about-text-container h2 {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 6%;
+    }
+
+    .container-about-page {
+        flex-direction: column;
+    }
+
+    .container-about-page .about-box {
+        width: 100%;
+        margin-top: 6%;
+    }
+
+    .container-about-page .about-box h2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-bottom-content .text-container h2 {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 8%;
+    }
+}
